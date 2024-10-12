@@ -11,7 +11,7 @@ class Fornecedor extends Model
 
     // Defina os campos que podem ser preenchidos em massa
     protected $fillable = [
-        'nome',
+        'nome_fornecedor',
         'email',
         'telefone',
         'endereco',

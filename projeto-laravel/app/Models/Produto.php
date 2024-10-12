@@ -20,7 +20,7 @@ class Produto extends Model
         'categoria',
         'subcategoria',
         'nome_fornecedor',
-        'fornecedor_id', // ID do fornecedor será utilizado
+        'fornecedor_id', 
         'quantidade',
         'preco',
     ];
