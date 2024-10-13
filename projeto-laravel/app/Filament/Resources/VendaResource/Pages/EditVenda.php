@@ -16,4 +16,10 @@ class EditVenda extends EditRecord
             Actions\DeleteAction::make(),
         ];
     }
+
+    protected function mutateFormDataBeforeSave(array $data): array
+    {
+        $data['total'] = collect($data['produtos'])->sum('subtotal');
+        return $data;
+    }
 }

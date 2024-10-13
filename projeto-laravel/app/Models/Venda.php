@@ -9,17 +9,15 @@ class Venda extends Model
 {
     use HasFactory;
 
-    // protected $fillable = ['cliente_id', 'produto_id', 'quantidade', 'preco', 'total'];
-    protected $fillable = ['cliente_id', 'produto_id', 'quantidade', 'preco_unitario', 'total'];
+    protected $fillable = ['cliente_id', 'total'];
 
     public function cliente()
     {
         return $this->belongsTo(Cliente::class);
     }
 
-    public function produto()
+    public function produtos()
     {
-        return $this->belongsTo(Produto::class);
+        return $this->belongsToMany(Produto::class)->withPivot('quantidade', 'preco_unitario', 'subtotal');
     }
-
 }
