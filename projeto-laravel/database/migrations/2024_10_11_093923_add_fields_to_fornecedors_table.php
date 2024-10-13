@@ -10,12 +10,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('fornecedors', function (Blueprint $table) {
-            $table->string('nome')->after('id');
-            $table->string('email')->unique()->after('nome');
-            $table->string('telefone')->after('email');
-            $table->string('endereco')->after('telefone');
-        });
+        // Schema::table('fornecedors', function (Blueprint $table) {
+        //     $table->string('nome')->after('id');
+        //     $table->string('email')->unique()->after('nome');
+        //     $table->string('telefone')->after('email');
+        //     $table->string('endereco')->after('telefone');
+        // });
     }
 
     /**
